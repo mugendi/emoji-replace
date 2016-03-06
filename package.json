@@ -1,0 +1,24 @@
+{
+  "name": "emoji-replace",
+  "version": "1.0.0",
+  "description": "Replace text-based emoticons with emojis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "emoticon",
+    "emoji",
+    "replace",
+    "parse",
+    "string",
+    "text"
+  ],
+  "author": "Anthony Mugendi <ngurumugz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "emojilib": "^2.0.2",
+    "emoticon-parser": "0.0.1",
+    "lodash": "^4.6.1"
+  }
+}
