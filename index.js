@@ -15,14 +15,11 @@ var emoji = require("emojilib");
 // console.log(rs);
 
 
-function emoji_replace(string, returnObject){
-  var str = string,
-      m = [],
+function emoji_replace(str, returnObject){
+
+  var m = [],
       obj = {},
       w = '';
-
-  //wrap as a promise
-  return new Promise(function(resolve, reject) {
 
     //first parse common emoticons
     str = emoticonParser.parseText(str);
@@ -30,7 +27,7 @@ function emoji_replace(string, returnObject){
     m = str.match(/:(.+?):/ig);
 
     _.each(m, function(v){
-
+        
         w = v.replace(/:/g,'');
 
         obj = emoji.lib[w] || _.find(emoji.lib, function(o) {
@@ -43,20 +40,7 @@ function emoji_replace(string, returnObject){
 
     });
 
-
-    if(!returnObject){
-      resolve(str);
-    }
-    else{
-      resolve(
-          {
-            old : string,
-            parsed: str
-          }
-      );
-    }
-
-  });
+    return str;
 
 }
 
