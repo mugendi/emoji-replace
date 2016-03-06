@@ -16,7 +16,7 @@ emoji_replace(str).then(function(response) {
 
   //return replaced text
   //if you would rather return an object containing both odl and new string, then call 'emoji_replace(str,true)'
-  console.log( JSON.stringify(response,0,4) );
+  console.log( JSON.stringify(response,0,4) ); //>> "my � and ❤️ �"
 
 });
 
